@@ -19,13 +19,17 @@ const PopUp = (props) => {
                             document.getElementById("category-text").value
                         ])
                     }
-                    
-                    // if(document.getElementById("team-text").value !== "") {
-                    //     props.setTeams([
-                    //         ...props.teams,
-                    //         document.getElementById("team-text").value
-                    //     ])
-                    // }
+                    console.log(document.getElementById("team-text").value)
+                    if(document.getElementById("team-text").value !== "") {
+                        props.setTeams([
+                            ...props.teams,
+                            {
+                                name : document.getElementById("team-text").value,
+                                pointCount: 0 
+                            }
+                            
+                        ])
+                    }
                     
                 }}>ok</button>
             </div>

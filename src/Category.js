@@ -11,7 +11,7 @@ const Category = (props) => {
             {
                 points.map((point) => {
                     return (
-                        <div className="point-value" style={{backgroundColor: colors[props.i]}}>
+                        <div className="point-value" style={{backgroundColor: colors[props.i % 3]}}>
                             {point}
                         </div>
                     )
