@@ -6,9 +6,9 @@ const PopUp = (props) => {
         <div className="pop-up">
             <div className="pop-up-content">
                 <p>Create Category</p>
-                <input id="category-text" type="text" autocomplete="off"></input>
+                <input id="category-text" type="text" autoComplete="off"></input>
                 <p>Create Team</p>
-                <input id="team-text" type="text" autocomplete="off"></input>
+                <input id="team-text" type="text" autoComplete="off"></input>
                 <button className="submit" 
                 onClick={()=>{
                     props.setAddNew(!props.addnew)

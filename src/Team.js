@@ -3,7 +3,6 @@ import React from "react";
 const Team = (props) => {
 
     const handleAddClick = (e) => {  
-        console.log("here!")
         // Get all the teams array
         let teams = [...props.teams]
         // Get the specific team we are changing

@@ -23,6 +23,30 @@ function App(){
      */
   const [teams, setTeams] = useState([])
 
+  // Questions and answers
+  /**
+   * QuestionAnswers is going to be an array of Question and Answers
+   * Example: 
+   * const questionAnswers = [
+   *  {
+   *    category: "Misc",
+   *    questions: ["Question 1", "Question 2", "Question 3"]
+   *    answers: ["Answer 1", "Answer 2", "Answer 3"]
+   *    answered: [false, true, true]
+   *  }
+   * ]
+   */
+  const [questionAnswers, setQuestionAnswers] = useState(
+    [
+      {
+        category: "Misc",
+        questions: ["Question 1", "Question 2", "Question 3"],
+        answers: ["Answer 1", "Answer 2", "Answer 3"],
+        answered: [false, true, true]
+      }
+    ]
+  )
+
 
   // When you click on the handleClick function -- it will toggle the state between true and false;
   const handleClick = (e) => {
@@ -46,7 +70,10 @@ function App(){
       <div className="categories-container">
         {
           categories.map((category, i) => {
-            return <Category categoryName={category} i={i}/>
+            return <Category categoryName={category} 
+                             i={i}
+                             questionAnswers={questionAnswers}
+                             setQuestionAnswers={setQuestionAnswers}/>
           })
         }
       </div>
@@ -60,7 +87,6 @@ function App(){
           })
         }
       </div>
-
     </div>
   )
 }
